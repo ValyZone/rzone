@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/home/logreg-page.css">
+</head>
+<body>
+<img src="/images/logo.png" alt="Logo" class="logo">
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form th:action="@{/home/process-login}" th:object="${userForm}" method="post">
+        <input type="text" th:field="*{username}" class="form-control mb-4 w-25" placeholder="Username">
+        <input type="password" th:field="*{password}" class="form-control mb-4 w-25" placeholder="Password">
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <button class="home-btn" th:onclick="|window.location.href='@{/home/}'|">Home</button>
+</div>
+</body>
+</html>

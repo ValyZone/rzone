@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/home/home-page.css">
+</head>
+<body>
+<img src="/images/logo.png" alt="Logo" class="logo">
+
+<div class="buttons">
+    <button th:onclick="|window.location.href='/home/login'|">Login</button>
+    <button th:onclick="|window.location.href='/home/register'|">Register</button>
+</div>
+</body>
+</html>

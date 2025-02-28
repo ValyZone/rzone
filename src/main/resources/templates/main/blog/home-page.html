@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Latest Blog</title>
+    <link rel="stylesheet" href="/css/main/blog/home-page.css">
+</head>
+<body>
+<img src="/images/logo.png" alt="Logo" class="logo">
+<div class="container">
+    <h1>Latest News</h1>
+
+    <div class="blog-post" th:if="${latestBlog != null}">
+        <h2 th:text="${latestBlog.title}"></h2>
+        <p class="date" th:text="${#temporals.format(latestBlog.createdAt, 'dd MMM yyyy HH:mm')}"></p>
+        <div style="white-space: pre-line;">
+            <p th:text="${latestBlog.content}"></p>
+        </div>
+    </div>
+    <div class="no-blog" th:if="${latestBlog == null}">
+        <p>No news available. Get back soon!.</p>
+    </div>
+</div>
+<div class="buttons">
+
+    <button th:onclick="|window.location.href='/main'|">Back to Main</button>
+    <button th:onclick="|window.location.href='/main'|">List all previous Blogs</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Write Blog</title>
+  <link rel="stylesheet" href="/css/admin/admin-page.css">
+</head>
+<body>
+<div class="admin-container">
+  <h2>Write a Blog Post</h2>
+
+  <form th:action="@{/admin/process-createBlog}" th:object="${blogForm}" method="post">
+    <input type="text" th:field="*{title}" placeholder="Title" required>
+    <textarea th:field="*{content}" placeholder="Write in Markdown..." rows="10"></textarea>
+    <button type="submit">Publish</button>
+  </form>
+
+  <h3>Upload Markdown File</h3>
+  <form th:action="@{/admin/blog/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".md">
+    <button type="submit">Upload</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/admin/home-page.css">
+
+    <script>
+        function showPopup(message) {
+            alert(message); // Simple pop-up alert
+        }
+    </script>
+
+</head>
+<body>
+<img src="/images/logo.png" alt="Logo" class="logo">
+
+<div class="buttons">
+    <button th:onclick="|window.location.href='/admin/createblog'|">Write a Blog</button>
+    <button th:onclick="|window.location.href='/home/register'|">Set scores</button>
+    <br><br>
+    <button th:onclick="|window.location.href='/main/blog/home-page'|">Blogs</button>
+    <button th:onclick="|window.location.href='/main/scoreboard/home-page'|">Scoreboard</button>
+</div>
+
+<script th:if="${blogCreated}">
+    showPopup("Blog has been created!");
+</script>
+
+</body>
+</html>
