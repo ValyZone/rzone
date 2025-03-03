@@ -1,33 +1,59 @@
 HELP.md
+
+### Build Outputs ###
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Maven ###
+!.mvn/wrapper/maven-wrapper.jar
+
+### Java Compiled Files ###
+*.class
+*.jar
+*.war
+*.ear
+
+### IDE & Editor Configurations ###
+# Spring Tool Suite (STS)
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+### Misc ###
+# Logs
+logs/
+*.log
+
+# Temporary & OS Files
+*.tmp
+*.swp
+*.swo
+*.bak
+.DS_Store  # macOS
+Thumbs.db  # Windows
+desktop.ini
