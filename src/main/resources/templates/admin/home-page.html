@@ -18,10 +18,10 @@
 
 <div class="buttons">
     <button th:onclick="|window.location.href='/admin/createblog'|">Write a Blog</button>
-    <button th:onclick="|window.location.href='/home/register'|">Set scores</button>
+    <button th:onclick="|window.location.href='/main/scoreboard/'|">Set scores</button>
     <br><br>
-    <button th:onclick="|window.location.href='/main/blog/home-page'|">Blogs</button>
-    <button th:onclick="|window.location.href='/main/scoreboard/home-page'|">Scoreboard</button>
+    <button th:onclick="|window.location.href='/main/blog/all'|">Blogs</button>
+    <button th:onclick="|window.location.href='/main/scoreboard/'|">Scoreboard</button>
 </div>
 
 <script th:if="${blogCreated}">

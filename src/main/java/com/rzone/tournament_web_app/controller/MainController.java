@@ -36,9 +36,20 @@ public class MainController {
     }
 
     @GetMapping("/blog/all")
-    public String showAllBlogs() {
+    public String showAllBlogs(Model model) {
 
-        return "main/blog/home-page";
+        model.addAttribute("allBlogs", blogService.findAll());
+        return "main/blog/all-page";
+    }
+
+    @GetMapping("/tournaments")
+    public String showTournaments() {
+        return "main/tournaments-page";
+    }
+
+    @GetMapping("/scoreboard/")
+    public String showScoreboard() {
+        return "main/scoreboard/home-page";
     }
 
 }

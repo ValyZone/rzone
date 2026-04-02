@@ -27,6 +27,11 @@ public class AdminController {
         return "admin/home-page";
     }
 
+    @GetMapping("")
+    public String showAdminPanel() {
+        return "admin/admin-page";
+    }
+
     @GetMapping("/createblog")
     public String showBlogForm(Model model) {
         model.addAttribute("blogForm", new BlogForm());
