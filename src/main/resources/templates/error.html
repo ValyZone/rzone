@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/css/home/logreg-page.css">
+</head>
+<body>
+<img src="/images/logo.png" alt="Logo" class="logo">
+<div class="login-container">
+    <h2 th:text="${status}">Error</h2>
+    <p th:text="${error}">Something went wrong.</p>
+    <p th:if="${message}" th:text="${message}"></p>
+    <button class="home-btn" onclick="window.location.href='/home/'">Go Home</button>
+</div>
+</body>
+</html>
